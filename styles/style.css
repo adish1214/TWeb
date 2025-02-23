@@ -328,7 +328,7 @@ body{
   font-size: 5vw;
   color: rgba(255, 255, 255, 0.11);
   background-color: rgba(0, 0, 0, 0);
-  background-image: url("/images/TPB.jpg");
+  background-image: url("../images/TPB.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
