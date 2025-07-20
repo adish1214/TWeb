@@ -1,0 +1,29 @@
+export const galleryImages=[{
+    id:1,
+    image:"./images/Third-Page-Gallery/Cuisine-1.jpg"
+},
+{
+    id:2,
+    image:"./images/Third-Page-Gallery/Culture-1.avif"
+},
+{
+    id:3,
+    image:"./images/Third-Page-Gallery/Cuisine-2.avif"
+},
+{
+    id:4,
+    image:"./images/Third-Page-Gallery/Culture-2.jpg"
+},
+{
+    id:5,
+    image:"./images/Third-Page-Gallery/Cuisine-3.png"
+},
+{
+    id:6,
+    image:"./images/Third-Page-Gallery/Culture-3.jpg"
+},
+{
+    id:7,
+    image:"./images/Third-Page-Gallery/Culture-4.jpg"
+}
+]

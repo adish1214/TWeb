@@ -1,8 +1,8 @@
-import {locations} from '../scripts/locations.js'
-let travelCardContainer = document.querySelector('.travel-cards')
+import { locations } from "../scripts/locations.js";
+import { galleryImages } from "./gallery.js";
+let travelCardContainer = document.querySelector(".travel-cards");
 
 locations.forEach((el) => {
-  console.log(el.location)
   travelCardContainer.innerHTML += `
     <div class="card">
                 <img src="images/Location Cards/${el.location}.jpg" />
@@ -14,24 +14,35 @@ locations.forEach((el) => {
                 </div>
               </div>
 
-    `
+    `;
 });
 
-let scrollContainer=document.querySelector(".third-page-gallery-container");
-let lScrollBtn=document.querySelector(".lbtn");
-let rScrollBtn=document.querySelector(".rbtn");
-console.log(scrollContainer.clientWidth)
+let galleryContainer = document.querySelector(".third-page-gallery-container");
+galleryImages.forEach((image) => {
+  console.log(image.id)
+  galleryContainer.innerHTML += `
+  <div class="image-container image-container-${image.id}">
+  <img src="${image.image}" />
+  </div>
+  `;
+});
 
-scrollContainer.addEventListener(("wheel"),(evt)=>{
+let scrollContainer = document.querySelector(".third-page-gallery-container");
+let lScrollBtn = document.querySelector(".lbtn");
+let rScrollBtn = document.querySelector(".rbtn");
+let imageContainer = document.querySelectorAll(".image-container");
+console.log(imageContainer)
+const containerWidth = scrollContainer.getBoundingClientRect().width;
+scrollContainer.addEventListener("wheel", (evt) => {
   evt.preventDefault();
-  scrollContainer.scrollLeft += 1.2*evt.deltaY;
-})
+  scrollContainer.scrollLeft += 1.6*evt.deltaY;
+});
 
-lScrollBtn.addEventListener('click',()=>{
-  scrollContainer.scrollLeft -= scrollContainer.clientWidth
-  wait(500)
-})
-rScrollBtn.addEventListener('click',()=>{
-  scrollContainer.scrollLeft += scrollContainer.clientWidth
-  console.log(scrollContainer.clientWidth)
-})
+lScrollBtn.addEventListener("click", () => {
+  scrollContainer.scrollLeft -= containerWidth;
+  wait(500);
+});
+rScrollBtn.addEventListener("click", () => {
+  scrollContainer.scrollLeft += containerWidth
+});
+
