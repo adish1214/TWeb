@@ -46,3 +46,11 @@ rScrollBtn.addEventListener("click", () => {
   scrollContainer.scrollLeft += containerWidth
 });
 
+let header = document.querySelector(".header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 1000) {
+    header.style.backgroundColor = "rgba(0, 0, 0, 0.448)";
+  } else {
+    header.style.backgroundColor = "rgba(255, 255, 255, 0)";
+  }
+});

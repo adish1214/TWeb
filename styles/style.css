@@ -26,24 +26,71 @@ body {
   align-items: center;
   position: relative;
 }
-.logo {
-  width: 64px;
-  aspect-ratio: 1;
-  position: absolute;
-  top: 2%;
-  left: 1%;
-  z-index: 6;
-  background-color: white;
-  border-radius: 50%;
+.header{
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 48px;
+  top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 24px 0px;
+  font-size: 28px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.4s;
+}
+.header:hover{
+  background-color: rgba(0, 0, 0, 0.448);
+}
+.header-info{
+  padding: 0 36px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+  color: white;
+  
+}
+.header-info a{
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  scroll-behavior: smooth;
+}
+.header-info>a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+  transition: 0.4s;
+  transform: scale(0, 1);
+}
+.header-info>a:hover:after {
+  transform: scale(1, 1);
+  transform-origin: center;
+}
+.logo {
+  width: 72px;
+  aspect-ratio: 1;
+  z-index: 6;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-left: 24px;
+
+  
 }
 .logo img {
-  width: 90%;
-  height: 90%;
+  width:  64px;
+  aspect-ratio: 1;
   border-radius: 50%;
 }
+
+
 
 .landing-text {
   position: absolute;
